@@ -1,0 +1,14 @@
+runtime: python27
+api_version: 1
+threadsafe: true
+handlers:
+- url: /avatar
+  static_dir: images
+- url: /.*
+  script: wsgi.application
+  
+libraries:
+  - name: ssl
+    version: latest
+env_variables:
+  WORK_ENV: PROD

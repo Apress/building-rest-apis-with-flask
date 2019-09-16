@@ -1,0 +1,32 @@
+*** Starting uWSGI 2.0.18 (64bit) on [Wed Apr 24 17:26:41 2019] ***
+compiled with version: 4.2.1 Compatible Apple LLVM 10.0.1 (clang-1001.0.46.4) on 23 April 2019 17:13:02
+os: Darwin-18.2.0 Darwin Kernel Version 18.2.0: Thu Dec 20 20:46:53 PST 2018; root:xnu-4903.241.1~1/RELEASE_X86_64
+nodename: Kunals-MacBook-Pro.local
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /Users/kunalrelan/Desktop/flask-api-starter/src
+detected binary path: /usr/local/bin/uwsgi
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 709
+your memory page size is 4096 bytes
+detected max file descriptor number: 10240
+lock engine: OSX spinlocks
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 0.0.0.0:5000 fd 3
+Python version: 2.7.10 (default, Aug 17 2018, 19:45:58)  [GCC 4.2.1 Compatible Apple LLVM 10.0.0 (clang-1000.0.42)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x7ff28df01200
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 72888 bytes (71 KB) for 1 cores
+*** Operational MODE: single process ***
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (and the only) (pid: 50108, cores: 1)
+--- no python application found, check your startup logs for errors ---
+[pid: 50108|app: -1|req: -1/1] 127.0.0.1 () {38 vars in 1073 bytes} [Wed Apr 24 17:26:48 2019] GET /api/docs => generated 21 bytes in 4 msecs (HTTP/1.1 500) 2 headers in 83 bytes (1 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 50108|app: -1|req: -1/2] 127.0.0.1 () {40 vars in 1033 bytes} [Wed Apr 24 17:26:48 2019] GET /favicon.ico => generated 21 bytes in 509 msecs (HTTP/1.1 500) 2 headers in 83 bytes (1 switches on core 0)

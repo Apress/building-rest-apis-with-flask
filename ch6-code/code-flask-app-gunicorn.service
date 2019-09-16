@@ -1,0 +1,14 @@
+[Unit]
+Description= Flask App service
+After=network.target
+
+[Service]
+User=flask
+Group=www-data
+Restart=on-failure
+Environment="WORK_ENV=PROD"
+WorkingDirectory=/home/flask/flask-api-app/src
+ExecStart=/home/flask/flask-api-app/src/venv/bin/gunicorn -c /home/flask/flask-api-app/src/gunicorn.conf -b 0.0.0.0:5000 wsgi:application
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,14 @@
+#Metadata and dependencies section
+[Unit]
+Description=Flask App service
+After=network.target
+#Define users and app working directory
+[Service]
+User=flask
+Group=www-data
+WorkingDirectory=/home/flask/flask-api-app/src
+Environment="WORK_ENV=PROD"
+ExecStart=/home/flask/flask-api-app/src/venv/bin/uwsgi --ini flask-app.ini
+#Link the service to start on multi-user system up
+[Install]
+WantedBy=multi-user.target
